@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+body { 
+	background-color: #333; 
+}
+
+.main-banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.main-banner img {
+    width: 100%;
+    height: auto;
+}
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.game-list {
+    margin: 20px;
+}
+.game-card {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    background-color: #2b2b2b;
+    padding: 10px;
+    border-radius: 5px;
+}
+.game-card img {
+    width: 100%;
+    height: auto;
+}
+
+
+
