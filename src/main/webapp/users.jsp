@@ -28,7 +28,7 @@
         form {
             margin-bottom: 20px;
         }
-        .btn {zzzzzz
+        .btn {
             padding: 5px 10px;
             border: none;
             background-color: #007BFF;
