@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+/* 전체 배경 및 텍스트 기본 설정 */
+body {
+    background-color: #2c3e50;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 중앙 배치 */
+.game-detail {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* 제목 스타일 */
+.game-detail h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* 이미지 스타일 */
+.game-detail img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+
+/* 가격 및 장바구니 섹션 */
+.price-cart-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #242424;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* 가격 정보 */
+.price-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.discount {
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.current-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f1c40f;
+}
+
+/* 장바구니 버튼 */
+.cart-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-btn:hover {
+    background-color: #45a049;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .price-cart-container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .cart-btn {
+        width: 100%;
+    }
+}
+
+
+
+/* 공통 컨테이너 */
+.content-container {
+	align-content: center;
+	width: 800px;
+    max-width: 800px; /* 두 섹션의 공통 너비 설정 */
+    margin: 50px auto; /* 중앙 정렬 */
+    padding: 20px;
+}
+
+/* 리뷰 섹션 */
+.review-section {
+    margin-top: 40px; /* 상세 정보와의 간격 */
+    background-color: #2b2b2b; /* 배경색 */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.review-section h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#reviewForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#reviewForm textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+#reviewForm button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reviewForm button:hover {
+    background-color: #45a049;
+}
+
+.review-list {
+    margin-top: 20px;
+}
+
+.review-item {
+    padding: 10px;
+    background-color: #242424;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.review-item p {
+    margin: 5px 0;
+}
+
+
+
+
+/* 평점별 css */
+.rating-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.star-rating {
+    direction: rtl; /* 별점을 오른쪽에서 왼쪽으로 표시 */
+    font-size: 2rem;
+    unicode-bidi: bidi-override;
+}
+
+.star-rating input[type="radio"] {
+    display: none; /* 라디오 버튼 숨기기 */
+}
+
+.star-rating label {
+    color: #ccc; /* 기본 별 색상 */
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.star-rating label:before {
+    content: "★"; /* 별 문자 */
+}
+
+.star-rating input[type="radio"]:checked ~ label {
+    color: #ffc107; /* 체크된 별 색상 (노란색) */
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #ffc107; /* 마우스 호버 시 색상 변경 */
+}
+
+
+
+
+/* 별점 표시 (리뷰 보기) */
+.star-rating-display .star {
+    color: #ccc;
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+.star-rating-display .star.filled {
+    color: #ffc107;
+}
+
